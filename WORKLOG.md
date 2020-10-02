@@ -5,5 +5,8 @@ James Henager Capstone Project Worklog
     - Built pre-planning diagram and prototype on Figma
 
 10/2
-  - 8:00 - 9:30
-    - Scaffolded new react app
+  - 8:00 - 9:00
+    - Scaffolded new react app and organized new work space
+  - 9:00 - 10:00
+    - Edited and added my capstone proposal to project
+    
