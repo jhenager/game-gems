@@ -9,4 +9,6 @@ James Henager Capstone Project Worklog
     - Scaffolded new react app and organized new work space
   - 9:00 - 10:00
     - Edited and added my capstone proposal to project
-    
+  - 10:00 - 11:00 
+    - Had a lengthy NPM install, so I took a stroll to clear my head
+  - 11:00 
