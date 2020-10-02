@@ -11,4 +11,5 @@ James Henager Capstone Project Worklog
     - Edited and added my capstone proposal to project
   - 10:00 - 11:00 
     - Had a lengthy NPM install, so I took a stroll to clear my head
-  - 11:00 
+  - 11:00 - 12:00
+    - Wrote a new readme for the project, with included diagram.

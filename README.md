@@ -41,6 +41,12 @@ An application made with React and Redux that allows the user to create a list o
 
 
 
+## **USER STORIES**
+
+- As a user, I should be able to authenticate my identity and log in.
+- As a user, I should be able to access a game's details page and submit a review form for that game.
+- As a user, I should be able to see the aggregated data for that game (by percentage) in a radar graph format.
+
 ## **SETUP**
 
 
