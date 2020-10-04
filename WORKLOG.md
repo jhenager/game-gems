@@ -31,3 +31,9 @@ Total Daily Hours: 6.5
     - Added all code to connect firestore to project
 
 Total Daily Hours: 2
+
+10/3
+  - 10:30 - 1:00
+    - Coded basic GameControl component. Will need adjustments.
+  - 3:00 - 4:00
+    - Plotted out database in Firestore/organized data

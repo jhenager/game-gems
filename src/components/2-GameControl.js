@@ -7,12 +7,65 @@ import { withFirestore, isLoaded } from "react-redux-firebase";
 
 class GameControl extends React.Component {
   constructor(props) {
+    super(props);
     this.state = {
       selectedGame: null,
       editing: false,
-    }
+    };
   }
 
+  componentDidMount() {
+    this.waitTimeUpdateTimer = setInterval(
+      () => this.updateGameElapsedWaitTime(),
+      60000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.waitTimeUpdateTimer);
+  }
+
+  updateGameElapsedWaitTime = () => {
+    const { dispatch } = this.props;
+  };
+
+  handleClick = () => {
+    if (this.state.selectedGame != null) {
+      this.setState({
+        selectedGame: null,
+        editing: false,
+      });
+    } else {
+      const { dispatch } = this.props;
+      const action = a.toggleForm();
+      dispatch(action);
+    }
+  };
+
+  handleChangingSelectedGame = (id) => {
+    this.props.firestore
+      .get({ collection: "games", doc: id })
+      .then((game) => {
+        const firestoreGame = {
+          // title: game.get("title"),
+          // genre: game.get("genre"),
+          // issue: game.get("issue"),
+          id: game.id,
+        };
+        this.setState({ selectedGame: firestoreGame });
+      });
+  };
+
+  handleReviewClick = () => {
+    this.setState({ editing: true });
+  };
+
+  handleEditingGameInList = () => {
+    this.setState({
+      editing: false,
+      selectedTicket: null,
+    });
+  };
 
   render() {
     const auth = this.props.firebase.auth();
