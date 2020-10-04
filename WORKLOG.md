@@ -27,3 +27,7 @@ Total Daily Hours: 6.5
 10/3
   - 12:00 - 1:30
     - Troubleshooting firestore more and FINALLY got it working (it was the CORS blocker)
+  - 1:30 - 2:00
+    - Added all code to connect firestore to project
+
+Total Daily Hours: 2
