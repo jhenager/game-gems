@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Game from "./Game";
+import Game from "./4-Game";
 import { useSelector } from "react-redux";
 import { useFirestoreConnect, isLoaded, isEmpty } from "react-redux-firebase";
 

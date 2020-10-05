@@ -1,5 +1,5 @@
 import React from 'react';
-import GameList from './GameList';
+import GameList from './3-GameList';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as a from "./../actions";
@@ -73,28 +73,28 @@ class GameControl extends React.Component {
     if (isLoaded(auth) && auth.currentUser != null) {
       let currentlyVisibleState = null;
       let buttonText = null;
-      if (this.state.editing) {
-        currentlyVisibleState = (
-          <AddReviewForm
-          game={this.state.selectedGame}
-          onAddReview={this.handleEditingGameInList}
-          />
-        );
-        buttonText = "Return to Game List"
-      } else if (this.state.selectedGame != null) {
-        currentlyVisibleState = (
-          <GameDetail
-            game={this.state.selectedGame}
-            onClickingReview={this.handleReviewClick}
-          />
-        );
-        buttonText = "Return to Game List"
-      } else {
+      // if (this.state.editing) {
+      //   currentlyVisibleState = (
+      //     <AddReviewForm
+      //     game={this.state.selectedGame}
+      //     onAddReview={this.handleEditingGameInList}
+      //     />
+      //   );
+      //   buttonText = "Return to Game List"
+      // } else if (this.state.selectedGame != null) {
+      //   currentlyVisibleState = (
+      //     <GameDetail
+      //       game={this.state.selectedGame}
+      //       onClickingReview={this.handleReviewClick}
+      //     />
+      //   );
+      //   buttonText = "Return to Game List"
+      // } else {
         currentlyVisibleState = (
           <GameList onGameSelection={this.handleChangingSelectedGame} />
         );
         buttonText = "Sign-in";
-      }
+      // }
       return (
       <React.Fragment>
         {currentlyVisibleState}

@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Header";
+import Header from "./2-Header";
 import GameControl from "./2-GameControl";
 
 
