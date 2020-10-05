@@ -20,6 +20,7 @@ function GameList(props) {
               whenGameClicked={props.onGameSelection}
               title={game.title}
               year={game.year}
+              story={game.story}
               stats={game.stats}
               id={game.id}
               key={game.id}
