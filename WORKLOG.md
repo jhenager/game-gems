@@ -40,4 +40,12 @@ Total Daily Hours: 2
   - 4:00 - 6:00
     - Debugged code until I could get it to display in the browser. Firestore is confirmed to connect.
 
+Total Daily Hours: 5.5
+
 10/4
+  - 9:00 - 10:00
+    - Importing and configuring chart js 
+  - 10:00 - 11:00 
+    - Worked on getting chart js to actually build and display 
+  - 11:00 - 12:30
+    - Worked on getting data from firestore to display in chart as template literal (actually figured it out)
