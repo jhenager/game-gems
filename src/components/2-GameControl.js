@@ -68,11 +68,12 @@ class GameControl extends React.Component {
   };
 
   render() {
-    const auth = this.props.firebase.auth();
+    // const auth = this.props.firebase.auth();
 
-    if (isLoaded(auth) && auth.currentUser != null) {
-      let currentlyVisibleState = null;
-      let buttonText = null;
+    // if (isLoaded(auth) && auth.currentUser != null) {
+    //   let currentlyVisibleState = null;
+    //   let buttonText = null;
+    
       // if (this.state.editing) {
       //   currentlyVisibleState = (
       //     <AddReviewForm
@@ -90,21 +91,23 @@ class GameControl extends React.Component {
       //   );
       //   buttonText = "Return to Game List"
       // } else {
-        currentlyVisibleState = (
-          <GameList onGameSelection={this.handleChangingSelectedGame} />
-        );
-        buttonText = "Sign-in";
+    
+        // currentlyVisibleState = (
+          // <GameList onGameSelection={this.handleChangingSelectedGame} />
+        // );
+        // buttonText = "Sign-in";
       // }
       return (
       <React.Fragment>
-        {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
+        <GameList onGameSelection={this.handleChangingSelectedGame} />
+        {/* {currentlyVisibleState} */}
+        <button onClick={this.handleClick}>Click</button>
       </React.Fragment>
       );
     }
   }
 
-}
+// }
 
 const mapStateToProps = (state) => {
   return {

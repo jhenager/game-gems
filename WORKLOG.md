@@ -37,3 +37,5 @@ Total Daily Hours: 2
     - Coded basic GameControl component. Will need adjustments.
   - 3:00 - 4:00
     - Plotted out database in Firestore/organized data
+  - 4:00 - 6:00
+    - Debugged code until I could get it to display in the browser. Firestore is confirmed to connect.

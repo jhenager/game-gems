@@ -28,4 +28,6 @@ ReactDOM.render(
     </ReactReduxFirebaseProvider>
   </Provider>,
   document.getElementById('root')
-)
+);
+
+serviceWorker.unregister();
