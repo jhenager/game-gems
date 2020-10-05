@@ -1,5 +1,6 @@
 import React from 'react';
 import GameList from './3-GameList';
+import GameDetail from './3-GameDetail';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as a from "./../actions";
@@ -47,9 +48,12 @@ class GameControl extends React.Component {
       .get({ collection: "games", doc: id })
       .then((game) => {
         const firestoreGame = {
-          // title: game.get("title"),
-          // genre: game.get("genre"),
-          // issue: game.get("issue"),
+          title: game.get("title"),
+          genre: game.get("genre"),
+          publishers: game.get("publishers"),
+          developers: game.get("developers"),
+          synopsis: game.get("synopsis"),
+          year: game.get("year"),
           id: game.id,
         };
         this.setState({ selectedGame: firestoreGame });
@@ -71,8 +75,8 @@ class GameControl extends React.Component {
     // const auth = this.props.firebase.auth();
 
     // if (isLoaded(auth) && auth.currentUser != null) {
-    //   let currentlyVisibleState = null;
-    //   let buttonText = null;
+      let currentlyVisibleState = null;
+      let buttonText = null;
     
       // if (this.state.editing) {
       //   currentlyVisibleState = (
@@ -82,26 +86,27 @@ class GameControl extends React.Component {
       //     />
       //   );
       //   buttonText = "Return to Game List"
-      // } else if (this.state.selectedGame != null) {
-      //   currentlyVisibleState = (
-      //     <GameDetail
-      //       game={this.state.selectedGame}
-      //       onClickingReview={this.handleReviewClick}
-      //     />
-      //   );
-      //   buttonText = "Return to Game List"
-      // } else {
+      // } else 
+      if (this.state.selectedGame != null) {
+        currentlyVisibleState = (
+          <GameDetail
+            game={this.state.selectedGame}
+            onClickingReview={this.handleReviewClick}
+          />
+        );
+        buttonText = "Return to Game List"
+      } else {
     
-        // currentlyVisibleState = (
-          // <GameList onGameSelection={this.handleChangingSelectedGame} />
-        // );
-        // buttonText = "Sign-in";
-      // }
+        currentlyVisibleState = (
+          <GameList onGameSelection={this.handleChangingSelectedGame} />
+        );
+        buttonText = "Sign-in";
+      }
       return (
       <React.Fragment>
-        <GameList onGameSelection={this.handleChangingSelectedGame} />
-        {/* {currentlyVisibleState} */}
-        <button onClick={this.handleClick}>Click</button>
+        {/* <GameList onGameSelection={this.handleChangingSelectedGame} /> */}
+        {currentlyVisibleState}
+        <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
       );
     }

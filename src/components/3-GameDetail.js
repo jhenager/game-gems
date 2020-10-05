@@ -16,7 +16,7 @@ function GameDetail(props){
   );
 }
 
-GameDetail.PropTypes = {
+GameDetail.propTypes = {
   game: PropTypes.object,
 }
 
