@@ -21,6 +21,13 @@ function GameList(props) {
               title={game.title}
               year={game.year}
               story={game.story}
+              gameplay={game.gameplay}
+              style={game.style}
+              challenge={game.challenge}
+              replay={game.replay}
+              social={game.social}
+              innovation={game.innovation}
+              freedom={game.freedom}
               stats={game.stats}
               id={game.id}
               key={game.id}

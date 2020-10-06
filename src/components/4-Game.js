@@ -17,7 +17,7 @@ function Game(props){
           pointBorderColor: '#fff',
           pointHoverBackgroundColor: '#fff',
           pointHoverBorderColor: 'rgba(179,181,198,1)',
-          data: [`${props.stats[0]}`, `${props.stats[1]}`, `${props.stats[2]}`, `${props.stats[3]}`, `${props.stats[4]}`, `${props.stats[5]}`, `${props.stats[6]}`, `${props.stats[7]}`]
+          data: [`${props.story}`, `${props.gameplay}`, `${props.style}`, `${props.challenge}`, `${props.replay}`, `${props.social}`, `${props.innovation}`, `${props.freedom}`]
       }
     ]
   };

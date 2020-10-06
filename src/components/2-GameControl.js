@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import * as a from "./../actions";
 import { withFirestore, isLoaded } from "react-redux-firebase";
 
+
 class GameControl extends React.Component {
   constructor(props) {
     super(props);
@@ -54,6 +55,15 @@ class GameControl extends React.Component {
           developers: game.get("developers"),
           synopsis: game.get("synopsis"),
           year: game.get("year"),
+          stats: game.get("stats"),
+          story: game.get("story"),
+          gameplay: game.get("gameplay"),
+          style: game.get("style"),
+          challenge: game.get("challenge"),
+          replay: game.get("replay"),
+          social: game.get("social"),
+          innovation: game.get("innovation"),
+          freedom: game.get("freedom"),
           id: game.id,
         };
         this.setState({ selectedGame: firestoreGame });
