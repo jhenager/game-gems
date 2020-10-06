@@ -30,6 +30,7 @@ function GameDetail(props){
       <p>Publisher(s): {game.publishers}</p>  
       <p>Genre: {game.genre}</p>
       <p>Synopsis: {game.synopsis}</p>
+      <button onClick={ props.onClickingReview }>Review this game</button>
       <Radar data={data} />
     </React.Fragment>
   );
@@ -37,6 +38,7 @@ function GameDetail(props){
 
 GameDetail.propTypes = {
   game: PropTypes.object,
+  onClickingReview: PropTypes.func
 }
 
 export default GameDetail;

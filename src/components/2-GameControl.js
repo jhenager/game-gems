@@ -1,6 +1,7 @@
 import React from 'react';
 import GameList from './3-GameList';
 import GameDetail from './3-GameDetail';
+import AddReviewForm from './3-AddReviewForm';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as a from "./../actions";
@@ -88,16 +89,15 @@ class GameControl extends React.Component {
       let currentlyVisibleState = null;
       let buttonText = null;
     
-      // if (this.state.editing) {
-      //   currentlyVisibleState = (
-      //     <AddReviewForm
-      //     game={this.state.selectedGame}
-      //     onAddReview={this.handleEditingGameInList}
-      //     />
-      //   );
-      //   buttonText = "Return to Game List"
-      // } else 
-      if (this.state.selectedGame != null) {
+      if (this.state.editing) {
+        currentlyVisibleState = (
+          <AddReviewForm
+          game={this.state.selectedGame}
+          onAddReview={this.handleEditingGameInList}
+          />
+        );
+        buttonText = "Return to Game List"
+      } else if (this.state.selectedGame != null) {
         currentlyVisibleState = (
           <GameDetail
             game={this.state.selectedGame}

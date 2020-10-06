@@ -49,3 +49,13 @@ Total Daily Hours: 5.5
     - Worked on getting chart js to actually build and display 
   - 11:00 - 12:30
     - Worked on getting data from firestore to display in chart as template literal (actually figured it out)
+  - 1:30 - 3:00 
+    - Worked on writing the addreviewform component
+  - 3:00 - 4:30
+    - Rearranged my data structures multiple times to see which would work best in the addreviewform, switched between array, map and number
+  - 4:30 - 5:00
+    - Meeting with Brooke, discussed data structures
+
+Total Daily Hours: 7
+
+10/5
