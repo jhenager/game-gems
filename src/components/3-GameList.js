@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Game from "./4-Game";
 import { useSelector } from "react-redux";
 import { useFirestoreConnect, isLoaded, isEmpty } from "react-redux-firebase";
+import Spinner from 'react-bootstrap/Spinner';
 
 function GameList(props) {
 
@@ -39,7 +40,9 @@ function GameList(props) {
   } else {
     return (
       <React.Fragment>
-        <h3>Loading...</h3>
+        <Spinner animation="border" role="status">
+          <span className="sr-only">Loading...</span>
+        </Spinner>
       </React.Fragment>
     );
   }
