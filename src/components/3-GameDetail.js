@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {Radar} from 'react-chartjs-2';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 
 function GameDetail(props){
   const { game } = props;
@@ -24,14 +27,23 @@ function GameDetail(props){
   return (
     
     <React.Fragment>
-      <h1>{game.title}</h1>
-      <p>Year Released: {game.year}</p>
-      <p>Developer(s): {game.developers}</p>
-      <p>Publisher(s): {game.publishers}</p>  
-      <p>Genre: {game.genre}</p>
-      <p>Synopsis: {game.synopsis}</p>
-      <button onClick={ props.onClickingReview }>Review this game</button>
-      <Radar data={data} />
+      <Container fluid>
+        <Card>
+          <Container>
+
+            <h1>{game.title}</h1>
+            <p>Year Released: {game.year}</p>
+            <p>Developer(s): {game.developers}</p>
+            <p>Publisher(s): {game.publishers}</p>  
+            <p>Genre: {game.genre}</p>
+            <p>Synopsis: {game.synopsis}</p>
+            <Button  variant="secondary" size="lg" block onClick={ props.onClickingReview }>Review this game</Button>
+            <br />
+            <Radar data={data} />
+          </Container>
+        </Card>
+        <Button onClick={ props.clicked }>Back to Games</Button>
+      </Container>
     </React.Fragment>
   );
 }

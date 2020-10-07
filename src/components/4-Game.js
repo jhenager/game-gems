@@ -28,7 +28,7 @@ function Game(props){
       <Container fluid>
         <Card> 
           <div onClick = {() => props.whenGameClicked(props.id)}>
-            <Card.Header><h3>{props.title} - {props.year}</h3></Card.Header>
+            <Card.Header><h3>{props.title}</h3></Card.Header>
             <Card.Body><Radar data={data} /></Card.Body>
           </div>
           <hr/>

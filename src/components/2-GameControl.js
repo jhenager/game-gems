@@ -94,6 +94,7 @@ class GameControl extends React.Component {
           <AddReviewForm
           game={this.state.selectedGame}
           onAddReview={this.handleEditingGameInList}
+          clicked={this.handleClick}
           />
         );
         buttonText = "Return to Game List"
@@ -102,6 +103,7 @@ class GameControl extends React.Component {
           <GameDetail
             game={this.state.selectedGame}
             onClickingReview={this.handleReviewClick}
+            clicked={this.handleClick}
           />
         );
         buttonText = "Return to Game List"
@@ -116,7 +118,6 @@ class GameControl extends React.Component {
       <React.Fragment>
         {/* <GameList onGameSelection={this.handleChangingSelectedGame} /> */}
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
       );
     }
