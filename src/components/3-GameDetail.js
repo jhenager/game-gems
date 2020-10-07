@@ -4,6 +4,8 @@ import {Radar} from 'react-chartjs-2';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function GameDetail(props){
   const { game } = props;
@@ -50,38 +52,38 @@ if (numbers[0] === `${game.story}`) {
 let second = ""
 if (numbers[1] === `${game.story}`) {
   second = "Story"
-} else if (numbers[1] === `${game.gameplay}`) {
+} else if ((numbers[1] === `${game.gameplay}`) && (numbers[1] !== numbers[0])) {
   second = "Gameplay"
-} else if (numbers[1] === `${game.style}`) {
+} else if ((numbers[1] === `${game.style}`) && (numbers[1] !== numbers[0])) {
   second = "Style"
-} else if (numbers[1] === `${game.challenge}`) {
+} else if ((numbers[1] === `${game.challenge}`) && (numbers[1] !== numbers[0])) {
   second = "Challenge"
-} else if (numbers[1] === `${game.replay}`) {
+} else if ((numbers[1] === `${game.replay}`) && (numbers[1] !== numbers[0])) {
   second = "Replay"
-} else if (numbers[1] === `${game.social}`) {
+} else if ((numbers[1] === `${game.social}`) && (numbers[1] !== numbers[0])) {
   second = "Social"
-} else if (numbers[1] === `${game.innovation}`) {
+} else if ((numbers[1] === `${game.innovation}`) && (numbers[1] !== numbers[0])) {
   second = "Innovation"
-} else if (numbers[1] === `${game.freedom}`) {
+} else if ((numbers[1] === `${game.freedom}`) && (numbers[1] !== numbers[0])) {
   second = "Freedom"
 }
 
 let third = ""
 if (numbers[2] === `${game.story}`) {
   third = "Story"
-} else if (numbers[2] === `${game.gameplay}`) {
+} else if ((numbers[2] === `${game.gameplay}`) && (numbers[2] !== numbers[1])) {
   third = "Gameplay"
-} else if (numbers[2] === `${game.style}`) {
+} else if ((numbers[2] === `${game.style}`) && (numbers[2] !== numbers[1])){
   third = "Style"
-} else if (numbers[2] === `${game.challenge}`) {
+} else if ((numbers[2] === `${game.challenge}`) && (numbers[2] !== numbers[1])) {
   third = "Challenge"
-} else if (numbers[2] === `${game.replay}`) {
+} else if ((numbers[2] === `${game.replay}`) && (numbers[2] !== numbers[1])) {
   third = "Replay"
-} else if (numbers[2] === `${game.social}`) {
+} else if ((numbers[2] === `${game.social}`) && (numbers[2] !== numbers[1])) {
   third = "Social"
-} else if (numbers[2] === `${game.innovation}`) {
+} else if ((numbers[2] === `${game.innovation}`) && (numbers[2] !== numbers[1])) {
   third = "Innovation"
-} else if (numbers[2] === `${game.freedom}`) {
+} else if ((numbers[2] === `${game.freedom}`) && (numbers[2] !== numbers[1])) {
   third = "Freedom"
 }
   return (
@@ -90,13 +92,21 @@ if (numbers[2] === `${game.story}`) {
       <Container fluid>
         <Card>
           <Container>
+            <Card.Header>
+              <h1>{game.title}</h1>
+            </Card.Header>
+            <Row>
+              <Col>
+              <p>Year Released: {game.year}</p>
+              <p>Developer(s): {game.developers}</p>
+              <p>Publisher(s): {game.publishers}</p>  
+              <p>Genre: {game.genre}</p>
+              </Col>
+              <Col>
+                <p>Synopsis: {game.synopsis}</p>
+              </Col>
 
-            <h1>{game.title}</h1>
-            <p>Year Released: {game.year}</p>
-            <p>Developer(s): {game.developers}</p>
-            <p>Publisher(s): {game.publishers}</p>  
-            <p>Genre: {game.genre}</p>
-            <p>Synopsis: {game.synopsis}</p>
+            </Row>
             <Button  variant="secondary" size="lg" block onClick={ props.onClickingReview }>Review this game</Button>
             <br />
             <Radar data={data} />
@@ -105,7 +115,16 @@ if (numbers[2] === `${game.story}`) {
         </Card>
         <Card>
           <Container>
-            
+            <Card.Header>
+              <Row>
+                <h3>Top Traits</h3>
+              </Row>
+              <Row>
+                <Col>{first}</Col>
+                <Col>{second}</Col>
+                <Col>{third}</Col>
+              </Row>
+            </Card.Header>
           </Container>
         </Card>
         <Button onClick={ props.clicked }>Back to Games</Button>
