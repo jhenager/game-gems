@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {Radar} from 'react-chartjs-2';
-
+import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
 
 
 
@@ -17,18 +18,22 @@ function Game(props){
           pointBorderColor: '#fff',
           pointHoverBackgroundColor: '#fff',
           pointHoverBorderColor: 'rgba(179,181,198,1)',
+          responsive: true,
           data: [`${props.story}`, `${props.gameplay}`, `${props.style}`, `${props.challenge}`, `${props.replay}`, `${props.social}`, `${props.innovation}`, `${props.freedom}`]
       }
-    ]
+    ],
   };
   return (
     <React.Fragment>
-      <div onClick = {() => props.whenGameClicked(props.id)}>
-        <h3>{props.title} - {props.year}</h3>
-    
-        <Radar data={data} />
-      </div>
-      <hr/>
+      <Container fluid>
+        <Card> 
+          <div onClick = {() => props.whenGameClicked(props.id)}>
+            <Card.Header><h3>{props.title} - {props.year}</h3></Card.Header>
+            <Card.Body><Radar data={data} /></Card.Body>
+          </div>
+          <hr/>
+        </Card>
+      </Container>
     </React.Fragment>
   );
 }

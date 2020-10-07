@@ -59,3 +59,9 @@ Total Daily Hours: 5.5
 Total Daily Hours: 7
 
 10/5
+ - 9:00 - 10:00
+  - Researched ways to make the review form increment individual property values
+- 10:00 - 12:00
+  - Rewrote the addreview form and connected the routing in gamecontrol
+- 1:00 - 2:00
+  - Experimented with different forms
