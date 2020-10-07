@@ -65,3 +65,10 @@ Total Daily Hours: 7
   - Rewrote the addreview form and connected the routing in gamecontrol
 - 1:00 - 2:00
   - Experimented with different forms
+
+
+10/6
+  - 8:00 - 9:00
+    - Researched React bootstrap to figure out which elements to use
+  - 9:00 - 11:00 
+    - Started adding bootstrap to different components in the project

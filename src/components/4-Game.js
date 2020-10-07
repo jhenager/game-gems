@@ -18,18 +18,46 @@ function Game(props){
           pointBorderColor: '#fff',
           pointHoverBackgroundColor: '#fff',
           pointHoverBorderColor: 'rgba(179,181,198,1)',
-          responsive: true,
           data: [`${props.story}`, `${props.gameplay}`, `${props.style}`, `${props.challenge}`, `${props.replay}`, `${props.social}`, `${props.innovation}`, `${props.freedom}`]
       }
     ],
   };
+ 
+  const options = {
+    responsive: true,
+    
+    layout: {
+      padding: {
+          top: 5,
+          left: 15,
+          right: 15,
+          bottom: 15
+      }
+    },
+    legend: {
+      display: false,
+    },
+    scales: {
+      ticks:[{
+        display: false,
+      }],
+      yAxes: [{
+        display: false,
+        ticks: {
+          beginAtZero: true,
+            display: false,
+          
+        },
+      }],
+    }
+  }
   return (
     <React.Fragment>
       <Container fluid>
         <Card> 
           <div onClick = {() => props.whenGameClicked(props.id)}>
             <Card.Header><h3>{props.title}</h3></Card.Header>
-            <Card.Body><Radar data={data} /></Card.Body>
+            <Card.Body><Radar data={data} options={options} /></Card.Body>
           </div>
           <hr/>
         </Card>
@@ -42,7 +70,6 @@ function Game(props){
 Game.propTypes = {
   title: PropTypes.string,
   year: PropTypes.string,
-  stats: PropTypes.array,
   story: PropTypes.number,
   id: PropTypes.string,
   whenGameClicked: PropTypes.func

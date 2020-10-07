@@ -56,7 +56,6 @@ class GameControl extends React.Component {
           developers: game.get("developers"),
           synopsis: game.get("synopsis"),
           year: game.get("year"),
-          stats: game.get("stats"),
           story: game.get("story"),
           gameplay: game.get("gameplay"),
           style: game.get("style"),

@@ -4,6 +4,7 @@ import Game from "./4-Game";
 import { useSelector } from "react-redux";
 import { useFirestoreConnect, isLoaded, isEmpty } from "react-redux-firebase";
 import Spinner from 'react-bootstrap/Spinner';
+import Container from 'react-bootstrap/Container';
 
 function GameList(props) {
 
@@ -14,27 +15,27 @@ function GameList(props) {
   if(isLoaded(games)) {
     return (
       <React.Fragment>
-        <hr />
-        {games.map((game) => {
-          return (
-            <Game
-              whenGameClicked={props.onGameSelection}
-              title={game.title}
-              year={game.year}
-              story={game.story}
-              gameplay={game.gameplay}
-              style={game.style}
-              challenge={game.challenge}
-              replay={game.replay}
-              social={game.social}
-              innovation={game.innovation}
-              freedom={game.freedom}
-              stats={game.stats}
-              id={game.id}
-              key={game.id}
-              />
-          );
-        })}
+        <Container fluid>
+          {games.map((game) => {
+            return (
+              <Game
+                whenGameClicked={props.onGameSelection}
+                title={game.title}
+                year={game.year}
+                story={game.story}
+                gameplay={game.gameplay}
+                style={game.style}
+                challenge={game.challenge}
+                replay={game.replay}
+                social={game.social}
+                innovation={game.innovation}
+                freedom={game.freedom}
+                id={game.id}
+                key={game.id}
+                />
+                );
+              })}
+            </Container>
       </React.Fragment>
     );
   } else {
