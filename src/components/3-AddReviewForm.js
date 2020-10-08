@@ -96,6 +96,7 @@ function AddReviewForm(props) {
   }
 
   return (
+    <div className='background'>
     <Container className='form-container'>
       <Card className='review-card'>
         <Card.Header>
@@ -115,9 +116,9 @@ function AddReviewForm(props) {
             </Form.Control>
             <br />
             <Form.Control className='dropdown' as='select' name='drop2'>
+              <option value="style">Style</option>
               <option value="story" >Story</option>
               <option value="gameplay">Gameplay</option>
-              <option value="style">Style</option>
               <option value="challenge">Challenge</option>
               <option value="replay">Replay value</option>
               <option value="social">Social/Community</option>
@@ -126,8 +127,8 @@ function AddReviewForm(props) {
             </Form.Control>
             <br />
             <Form.Control className='dropdown' as='select' name='drop3'>
-              <option value="story" >Story</option>
               <option value="gameplay">Gameplay</option>
+              <option value="story" >Story</option>
               <option value="style">Style</option>
               <option value="challenge">Challenge</option>
               <option value="replay">Replay value</option>
@@ -142,6 +143,8 @@ function AddReviewForm(props) {
         </Form>
       </Card>
     </Container>
+    <div className='footer' />
+    </div>
   )
 }
     AddReviewForm.propTypes = {

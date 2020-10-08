@@ -110,7 +110,7 @@ class GameControl extends React.Component {
         currentlyVisibleState = (
           <GameList onGameSelection={this.handleChangingSelectedGame} />
         );
-        buttonText = "Sign-in";
+      
       }
       return (
       <React.Fragment>
