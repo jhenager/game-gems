@@ -26,14 +26,6 @@ function Game(props){
   const options = {
     responsive: true,
     
-    layout: {
-      padding: {
-          top: 5,
-          left: 15,
-          right: 15,
-          bottom: 15
-      }
-    },
     legend: {
       display: false,
     },

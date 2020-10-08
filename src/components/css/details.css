@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+
+.button-card {
+  margin: 15px;
+}
+
+.col-left {
+  margin-right: 15px;
+}
+
+.col-right {
+  margin-left: 15px;
+}
+
+.detail-body {
+  margin: 15px;
+  margin-top: 30px;
+}
+
+.detail-card {
+  margin: 15px;
+}
+
+.radar {
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.title {
+  padding: 10px;
+  text-align: center;
+  font-family: 'Crimson Text', serif;
+}
+
+.trait {
+  text-align: center;
+}
+.trait-body {
+  margin: 15px;
+}

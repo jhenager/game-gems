@@ -4,6 +4,10 @@ import { useFirestore } from "react-redux-firebase";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import './css/review.css';
 
 function AddReviewForm(props) {
   const firestore = useFirestore();
@@ -93,43 +97,50 @@ function AddReviewForm(props) {
 
   return (
     <Container className='form-container'>
-      <h3>Pick 3 things you think this game does best:</h3>
-      <Form onSubmit={addReviewToFirestore}>
-        <Form.Group controlId="top3">
-          <Form.Control as='select' name='drop1'>
-            <option value="story" >Story</option>
-            <option value="gameplay">Gameplay</option>
-            <option value="style">Style</option>
-            <option value="challenge">Challenge</option>
-            <option value="replay">Replay value</option>
-            <option value="social">Social/Community</option>
-            <option value="innovation">Innovation</option>
-            <option value="freedom">Freedom</option>
-          </Form.Control>
-          <Form.Control as='select' name='drop2'>
-            <option value="story" >Story</option>
-            <option value="gameplay">Gameplay</option>
-            <option value="style">Style</option>
-            <option value="challenge">Challenge</option>
-            <option value="replay">Replay value</option>
-            <option value="social">Social/Community</option>
-            <option value="innovation">Innovation</option>
-            <option value="freedom">Freedom</option>
-          </Form.Control>
-          <Form.Control as='select' name='drop3'>
-            <option value="story" >Story</option>
-            <option value="gameplay">Gameplay</option>
-            <option value="style">Style</option>
-            <option value="challenge">Challenge</option>
-            <option value="replay">Replay value</option>
-            <option value="social">Social/Community</option>
-            <option value="innovation">Innovation</option>
-            <option value="freedom">Freedom</option>
-          </Form.Control>
-        <Button type='submit'>Submit</Button>
-        </Form.Group>
-      
-      </Form>
+      <Card className='review-card'>
+        <Card.Header>
+          <h3 className='title'>What does this game do best?</h3>
+        </Card.Header>
+        <Form onSubmit={addReviewToFirestore}>
+          <Form.Group className='form-group' controlId="top3">
+            <Form.Control className='dropdown' as='select' name='drop1'>
+              <option value="story" >Story</option>
+              <option value="gameplay">Gameplay</option>
+              <option value="style">Style</option>
+              <option value="challenge">Challenge</option>
+              <option value="replay">Replay value</option>
+              <option value="social">Social/Community</option>
+              <option value="innovation">Innovation</option>
+              <option value="freedom">Freedom</option>
+            </Form.Control>
+            <br />
+            <Form.Control className='dropdown' as='select' name='drop2'>
+              <option value="story" >Story</option>
+              <option value="gameplay">Gameplay</option>
+              <option value="style">Style</option>
+              <option value="challenge">Challenge</option>
+              <option value="replay">Replay value</option>
+              <option value="social">Social/Community</option>
+              <option value="innovation">Innovation</option>
+              <option value="freedom">Freedom</option>
+            </Form.Control>
+            <br />
+            <Form.Control className='dropdown' as='select' name='drop3'>
+              <option value="story" >Story</option>
+              <option value="gameplay">Gameplay</option>
+              <option value="style">Style</option>
+              <option value="challenge">Challenge</option>
+              <option value="replay">Replay value</option>
+              <option value="social">Social/Community</option>
+              <option value="innovation">Innovation</option>
+              <option value="freedom">Freedom</option>
+            </Form.Control>
+            <br />
+          <Button type='submit'>Submit</Button>
+          </Form.Group>
+        
+        </Form>
+      </Card>
     </Container>
   )
 }

@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import './css/details.css';
 
 function GameDetail(props){
   const { game } = props;
@@ -25,6 +26,27 @@ function GameDetail(props){
     }
   ]
 };
+const options = {
+  responsive: true,
+  
+  legend: {
+    display: false,
+  },
+  scales: {
+    ticks:[{
+      display: false,
+    }],
+    yAxes: [{
+      display: false,
+      ticks: {
+        beginAtZero: true,
+          display: false,
+        
+      },
+    }],
+  }
+}
+
 let numbers = [`${game.story}`, `${game.gameplay}`, `${game.style}`, `${game.challenge}`, `${game.replay}`, `${game.social}`, `${game.innovation}`, `${game.freedom}`];
 numbers.sort(function(a, b) {
   return b - a;
@@ -90,44 +112,49 @@ if (numbers[2] === `${game.story}`) {
     
     <React.Fragment>
       <Container fluid>
-        <Card>
+        <Card className='detail-card'>
           <Container>
             <Card.Header>
-              <h1>{game.title}</h1>
+              <h1 className='title'>{game.title}</h1>
             </Card.Header>
-            <Row>
-              <Col>
-              <p>Year Released: {game.year}</p>
-              <p>Developer(s): {game.developers}</p>
-              <p>Publisher(s): {game.publishers}</p>  
-              <p>Genre: {game.genre}</p>
+            <Row className='detail-body'>
+              <Col className='col-left'>
+              <p><strong>Year Released:</strong> {game.year}</p>
+              <p><strong>Developer(s):</strong> {game.developers}</p>
+              <p><strong>Publisher(s):</strong> {game.publishers}</p>  
+              <p><strong>Genre:</strong> {game.genre}</p>
               </Col>
-              <Col>
-                <p>Synopsis: {game.synopsis}</p>
+              <Col className='col-right'>
+                <p><strong>Synopsis:</strong> {game.synopsis}</p>
               </Col>
 
             </Row>
             <Button  variant="secondary" size="lg" block onClick={ props.onClickingReview }>Review this game</Button>
             <br />
-            <Radar data={data} />
-            <p>{first}</p>
+            <Container  className='radar'>
+              <Radar data={data} options={options} />
+            </Container>
           </Container>
         </Card>
-        <Card>
+        <Card className='trait-body'>
           <Container>
             <Card.Header>
-              <Row>
-                <h3>Top Traits</h3>
-              </Row>
-              <Row>
-                <Col>{first}</Col>
-                <Col>{second}</Col>
-                <Col>{third}</Col>
-              </Row>
+                <h3 className='title'>Top Traits</h3>
+              
             </Card.Header>
+            <Card.Body>
+              <Row>
+                <Col><p className='trait'>{first}</p></Col>
+                <Col><p className='trait'>{second}</p></Col>
+                <Col><p className='trait'>{third}</p></Col>
+              </Row>
+            </Card.Body>
           </Container>
         </Card>
-        <Button onClick={ props.clicked }>Back to Games</Button>
+        <Card className='button-card'>
+          <Button onClick={ props.clicked }>Back to Games</Button>
+
+        </Card>
       </Container>
     </React.Fragment>
   );
