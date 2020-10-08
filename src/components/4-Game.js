@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import {Radar} from 'react-chartjs-2';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
-
+import Accordion from 'react-bootstrap/Accordion';
+import Button from 'react-bootstrap/Button';
+import './css/game.css';
 
 
 function Game(props){
@@ -45,14 +47,23 @@ function Game(props){
   }
   return (
     <React.Fragment>
-      <Container fluid>
+      <br />
+      <Container>
+      <Accordion defaultActiveKey="0">
         <Card> 
-          <div onClick = {() => props.whenGameClicked(props.id)}>
-            <Card.Header><h3>{props.title}</h3></Card.Header>
-            <Card.Body><Radar data={data} options={options} /></Card.Body>
-          </div>
+            <Card.Header>
+              <Accordion.Toggle as={Button} variant="text" eventKey="1">
+                <h3 className='title'>{props.title}</h3>
+              </Accordion.Toggle>
+              </Card.Header>
+              <Accordion.Collapse eventKey="1">
+                <div onClick = {() => props.whenGameClicked(props.id)}>
+                  <Card.Body><Radar data={data} options={options} /></Card.Body>
+                </div>
+              </Accordion.Collapse>
           <hr/>
         </Card>
+        </Accordion>
       </Container>
     </React.Fragment>
   );

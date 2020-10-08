@@ -1,13 +1,21 @@
 import React from "react";
-import Jumbotron from 'react-bootstrap/Jumbotron';
+import Container from 'react-bootstrap/Container';
+import './css/header.css';
+
+
 
 function Header() {
-  const headerText = "Game Shapes";
+ 
   return (
     <React.Fragment>
-      <Jumbotron>
-        <h3>{headerText}</h3>
-      </Jumbotron>
+    
+      <div className='background-header'>
+        <Container className='title-container'>
+          <h3 className='title-header'>Game Gems</h3>
+          <p>Every game does something well</p>
+        </Container>
+        
+      </div>
     </React.Fragment>
   );
 }

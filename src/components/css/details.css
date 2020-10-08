@@ -2,7 +2,9 @@
 
 
 .button-card {
-  margin: 15px;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .col-left {
@@ -22,6 +24,10 @@
   margin: 15px;
 }
 
+.footer {
+  height: 5rem;
+  background-color: #788AA3;
+}
 .radar {
   margin-bottom: 40px;
   margin-top: 20px;

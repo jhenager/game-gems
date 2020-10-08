@@ -111,7 +111,9 @@ if (numbers[2] === `${game.story}`) {
   return (
     
     <React.Fragment>
+      <div className='background'>
       <Container fluid>
+        <br />
         <Card className='detail-card'>
           <Container>
             <Card.Header>
@@ -125,11 +127,11 @@ if (numbers[2] === `${game.story}`) {
               <p><strong>Genre:</strong> {game.genre}</p>
               </Col>
               <Col className='col-right'>
-                <p><strong>Synopsis:</strong> {game.synopsis}</p>
+                <p><strong>Synopsis:</strong> <br />{game.synopsis}</p>
               </Col>
 
             </Row>
-            <Button  variant="secondary" size="lg" block onClick={ props.onClickingReview }>Review this game</Button>
+            <Button   size="lg" block onClick={ props.onClickingReview }>Review this game</Button>
             <br />
             <Container  className='radar'>
               <Radar data={data} options={options} />
@@ -151,11 +153,16 @@ if (numbers[2] === `${game.story}`) {
             </Card.Body>
           </Container>
         </Card>
-        <Card className='button-card'>
-          <Button onClick={ props.clicked }>Back to Games</Button>
+        <Container className='button-card'>
+          <Row>
+            <Button onClick={ props.clicked }>Back to Games</Button>
 
-        </Card>
+          </Row>
+
+        </Container>
       </Container>
+      </div>
+      <div className='footer'></div>
     </React.Fragment>
   );
 }

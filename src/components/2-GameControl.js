@@ -107,7 +107,6 @@ class GameControl extends React.Component {
         );
         buttonText = "Return to Game List"
       } else {
-    
         currentlyVisibleState = (
           <GameList onGameSelection={this.handleChangingSelectedGame} />
         );
@@ -115,7 +114,6 @@ class GameControl extends React.Component {
       }
       return (
       <React.Fragment>
-        {/* <GameList onGameSelection={this.handleChangingSelectedGame} /> */}
         {currentlyVisibleState}
       </React.Fragment>
       );

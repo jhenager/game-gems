@@ -6,6 +6,8 @@ import { useFirestoreConnect, isLoaded, isEmpty } from "react-redux-firebase";
 import Spinner from 'react-bootstrap/Spinner';
 import Container from 'react-bootstrap/Container';
 
+import './css/gamelist.css';
+
 function GameList(props) {
 
   useFirestoreConnect([{ collection: "games" }]);
@@ -15,7 +17,8 @@ function GameList(props) {
   if(isLoaded(games)) {
     return (
       <React.Fragment>
-        <Container fluid>
+        
+        <div  className='background'>
           {games.map((game) => {
             return (
               <Game
@@ -35,14 +38,15 @@ function GameList(props) {
                 />
                 );
               })}
-            </Container>
+              <br />
+            </div>
       </React.Fragment>
     );
   } else {
     return (
       <React.Fragment>
         <Spinner animation="border" role="status">
-          <span className="sr-only">Loading...</span>
+          <span  className="sr-only">Loading...</span>
         </Spinner>
       </React.Fragment>
     );

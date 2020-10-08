@@ -1,0 +1,41 @@
+
+
+.background-header {
+  background-color: #788AA3;
+  
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 18rem;
+    text-align: center;
+  
+}
+
+body {
+  background-color: #788AA3;
+}
+
+.jumbotrong {
+  max-height: 50px;
+  padding: 0px;
+  background-color: #666A86;
+}
+
+.title-header {
+  padding: 10px;
+  text-align: center;
+  font-family: 'Crimson Text', serif;
+  font-size: 80px;
+ 
+}
+
+.title-container {
+  background-color: rgba(255, 255, 255, .5);
+  padding-bottom: 2%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  position: relative;
+  top: 100px;
+}
