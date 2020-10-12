@@ -1,4 +1,4 @@
-**<h1 align = "center"> Game Shapes**
+**<h1 align = "center"> Game Gems**
 
 
 
@@ -52,7 +52,7 @@ Game Gems is an application that aims to find a more positive way to evaluate vi
 
 copy this url to clone this project to your local system:
 ```html
-https://github.com/jhenager/tap-room.git
+https://github.com/jhenager/game-gems.git
 ```
 
 <br>
