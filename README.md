@@ -65,7 +65,7 @@ Once copied, select "Clone Repository" from within VSCode & paste the copied lin
 <br>
 
 * _Run the application_
-  1. _In the terminal, navigate to the project directory by running the command `> cd the-tap`_
+  1. _In the terminal, navigate to the project directory by running the command `> cd game-shapes`_
   2. _Now that we are in the the-tap directory you will run the command `> npm install` followed by `> npm start`_
   3. _Go to http://localhost:3000/ in your preferred browser to use the application_
 
