@@ -23,7 +23,7 @@
 
 **ABOUT**
 
-An application made with React and Redux that allows the user to create a list of taps, view the details, edit/delete each tap and also sell individual pints.
+Game Gems is an application that aims to find a more positive way to evaluate video games. The application allows the user to choose 3 qualities about a game that they really enjoyed. This data is aggregated and displayed in a radar chart called a 'gem', outlining the game's most popular strengths. This model is designed to ask players to consider what it was that made a game so special to them, or to draw out the better qualities of one they didn't enjoy as much. Every game does something well. Over time, the intention is that players will become more aware of the traits that they enjoy in games and to try others that feature similar ratings.
 
 
 ## **REQUIREMENTS**
@@ -52,7 +52,7 @@ An application made with React and Redux that allows the user to create a list o
 
 copy this url to clone this project to your local system:
 ```html
-https://github.com/jhenager/tap-room.git
+https://github.com/jhenager/game-gems.git
 ```
 
 <br>
@@ -65,7 +65,7 @@ Once copied, select "Clone Repository" from within VSCode & paste the copied lin
 <br>
 
 * _Run the application_
-  1. _In the terminal, navigate to the project directory by running the command `> cd the-tap`_
+  1. _In the terminal, navigate to the project directory by running the command `> cd game-shapes`_
   2. _Now that we are in the the-tap directory you will run the command `> npm install` followed by `> npm start`_
   3. _Go to http://localhost:3000/ in your preferred browser to use the application_
 
