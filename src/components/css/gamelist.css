@@ -3,4 +3,24 @@
 
 }
 
+.about {
+  background-color:  rgba(185, 203, 238, 0.5);
+  padding: 15px;
+}
+
+
+.about-card {
+  background-color:  rgba(248, 251, 252, 0.5);
+}
+
+.about-title {
+  text-align: center;
+  font-family: 'Crimson Text', serif;
+}
+
+.about-body {
+  text-align: center;
+  padding: 10px;
+  font-family: 'Crimson Text', serif;
+}
 

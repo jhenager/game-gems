@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import Game from "./4-Game";
 import { useSelector } from "react-redux";
-import { useFirestoreConnect, isLoaded, isEmpty } from "react-redux-firebase";
+import { useFirestoreConnect, isLoaded } from "react-redux-firebase";
 import Spinner from 'react-bootstrap/Spinner';
 import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
 
 import './css/gamelist.css';
 
@@ -19,6 +20,16 @@ function GameList(props) {
       <React.Fragment>
         
         <div  className='background'>
+          <Container className='about'>
+            <Card className='about-card'>
+              <br />
+                <Card.Title className='about-title'>Game Gems is a video game review site that does away with numbers and stars. </Card.Title>
+                <Card.Text className='about-body'>Instead, we focus on what a game does <strong>best</strong>. Choose three traits for each game that you think are the strongest. These results are aggregated and displayed in a unique game "gem" that models the strengths of the game.</Card.Text>
+              <br />
+            </Card>
+          </Container>
+          <br />
+          
           {games.map((game) => {
             return (
               <Game
@@ -45,9 +56,11 @@ function GameList(props) {
   } else {
     return (
       <React.Fragment>
-        <Spinner animation="border" role="status">
-          <span  className="sr-only">Loading...</span>
-        </Spinner>
+        <div  className='background'>
+          <Spinner animation="border" role="status">
+            <span  className="sr-only">Loading...</span>
+          </Spinner>
+        </div>
       </React.Fragment>
     );
   }

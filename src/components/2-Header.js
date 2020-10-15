@@ -12,7 +12,7 @@ function Header() {
       <div className='background-header'>
         <Container className='title-container'>
           <h3 className='title-header'>Game Gems</h3>
-          <p>Every game does something well</p>
+          <p><em>Every game does something well</em></p>
         </Container>
         
       </div>

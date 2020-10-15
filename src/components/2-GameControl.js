@@ -17,20 +17,7 @@ class GameControl extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.waitTimeUpdateTimer = setInterval(
-      () => this.updateGameElapsedWaitTime(),
-      60000
-    );
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.waitTimeUpdateTimer);
-  }
-
-  updateGameElapsedWaitTime = () => {
-    const { dispatch } = this.props;
-  };
+ 
 
   handleClick = () => {
     if (this.state.selectedGame != null) {
@@ -86,7 +73,6 @@ class GameControl extends React.Component {
 
     // if (isLoaded(auth) && auth.currentUser != null) {
       let currentlyVisibleState = null;
-      let buttonText = null;
     
       if (this.state.editing) {
         currentlyVisibleState = (
@@ -96,7 +82,7 @@ class GameControl extends React.Component {
           clicked={this.handleClick}
           />
         );
-        buttonText = "Return to Game List"
+        
       } else if (this.state.selectedGame != null) {
         currentlyVisibleState = (
           <GameDetail
@@ -105,7 +91,7 @@ class GameControl extends React.Component {
             clicked={this.handleClick}
           />
         );
-        buttonText = "Return to Game List"
+        
       } else {
         currentlyVisibleState = (
           <GameList onGameSelection={this.handleChangingSelectedGame} />
