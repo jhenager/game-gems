@@ -27,24 +27,29 @@ function Game(props){
  
   const options = {
     responsive: true,
-    
     legend: {
       display: false,
     },
-    scales: {
-      ticks:[{
+    scale: {
+      angleLines: {
+        display: true,
+      },
+      gridLines: {
+        circular: true,
+      },
+      pointLabels: {
+        fontSize: 20,
+        fontFamily: 'Crimson Text',
+      },
+      ticks:{
         display: false,
-      }],
-      yAxes: [{
-        display: false,
-        ticks: {
-          beginAtZero: true,
-            display: false,
-          
-        },
-      }],
+        beginAtZero: true,
+        suggestedMin: 0,
+        suggestedMax: 100,
+      }
     }
   }
+  
   return (
     <React.Fragment>
       <br />
@@ -58,6 +63,7 @@ function Game(props){
               </Card.Header>
               <Accordion.Collapse eventKey="1">
                 <div onClick = {() => props.whenGameClicked(props.id)}>
+                  <br />
                   <Card.Body><Radar data={data} options={options} /></Card.Body>
                 </div>
               </Accordion.Collapse>

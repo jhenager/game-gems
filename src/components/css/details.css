@@ -41,6 +41,8 @@
 
 .trait {
   text-align: center;
+  font-size: 30px;
+  font-family: 'Crimson Text', serif;
 }
 .trait-body {
   margin: 15px;

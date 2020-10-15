@@ -32,18 +32,26 @@ const options = {
   legend: {
     display: false,
   },
-  scales: {
-    ticks:[{
+  scale: {
+    angleLines: {
+      display: true,
+    },
+    
+    gridLines: {
+      circular: true,
+    },
+    pointLabels: {
+      fontSize: 20,
+      fontFamily: 'Crimson Text',
+    },
+    ticks:{
+      
       display: false,
-    }],
-    yAxes: [{
-      display: false,
-      ticks: {
-        beginAtZero: true,
-          display: false,
-        
-      },
-    }],
+      beginAtZero: true,
+      suggestedMin: 0,
+      suggestedMax: 100,
+    },
+  
   }
 }
 
