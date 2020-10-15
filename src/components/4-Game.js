@@ -9,6 +9,9 @@ import './css/game.css';
 
 
 function Game(props){
+
+  // Chart js data settings
+
   const data =  {
       labels: ['Story', 'Gameplay', 'Style', 'Challenge', 'Replay Value', 'Social', 'Innovation', 'Freedom'],
       datasets: [
@@ -25,6 +28,8 @@ function Game(props){
     ],
   };
  
+  // Chart js custom options
+
   const options = {
     responsive: true,
     
@@ -50,12 +55,13 @@ function Game(props){
       },
     } 
   }
+  
   return (
     <React.Fragment>
       <br />
       <Container>
-      <Accordion defaultActiveKey="0">
-        <Card> 
+        <Accordion defaultActiveKey="0">
+          <Card> 
             <Card.Header>
               <Accordion.Toggle as={Button} variant="text" eventKey="1">
                 <h3 className='title'>{props.title}</h3>
@@ -66,8 +72,8 @@ function Game(props){
                   <Card.Body><Radar data={data} options={options} /></Card.Body>
                 </div>
               </Accordion.Collapse>
-          <hr/>
-        </Card>
+            <hr/>
+          </Card>
         </Accordion>
       </Container>
     </React.Fragment>

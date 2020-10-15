@@ -11,6 +11,8 @@ import './css/details.css';
 function GameDetail(props){
   const { game } = props;
 
+  // Chart js data settings
+
   const data =  {
     labels: ['Story', 'Gameplay', 'Style', 'Challenge', 'Replay Value', 'Social', 'Innovation', 'Freedom'],
     datasets: [
@@ -26,6 +28,9 @@ function GameDetail(props){
     }
   ]
 };
+
+// Chart js custom options
+
 const options = {
   responsive: true,
   
@@ -45,15 +50,15 @@ const options = {
       fontFamily: 'Crimson Text',
     },
     ticks:{
-      
       display: false,
       beginAtZero: true,
       suggestedMin: 0,
       suggestedMax: 100,
     },
-  
   }
 }
+
+// Function for ordering traits in descending order numerically
 
 let numbers = [`${game.story}`, `${game.gameplay}`, `${game.style}`, `${game.challenge}`, `${game.replay}`, `${game.social}`, `${game.innovation}`, `${game.freedom}`];
 numbers.sort(function(a, b) {
@@ -116,8 +121,9 @@ if (numbers[2] === `${game.story}`) {
 } else if ((numbers[2] === `${game.freedom}`) && (numbers[2] !== numbers[1])) {
   third = "Freedom"
 }
+
   return (
-    
+  
     <React.Fragment>
       <div className='background'>
       <Container fluid>
@@ -137,9 +143,8 @@ if (numbers[2] === `${game.story}`) {
               <Col className='col-right'>
                 <p><strong>Synopsis:</strong> <br />{game.synopsis}</p>
               </Col>
-
             </Row>
-            <Button   size="lg" block onClick={ props.onClickingReview }>Review this game</Button>
+            <Button size="lg" block onClick={ props.onClickingReview }>Review this game</Button>
             <br />
             <Container  className='radar'>
               <Radar data={data} options={options} />
@@ -150,7 +155,6 @@ if (numbers[2] === `${game.story}`) {
           <Container>
             <Card.Header>
                 <h3 className='title'>Top Traits</h3>
-              
             </Card.Header>
             <Card.Body>
               <Row>
@@ -164,9 +168,7 @@ if (numbers[2] === `${game.story}`) {
         <Container className='button-card'>
           <Row>
             <Button onClick={ props.clicked }>Back to Games</Button>
-
           </Row>
-
         </Container>
       </Container>
       </div>

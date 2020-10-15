@@ -50,7 +50,7 @@ function GameList(props) {
                 );
               })}
               <br />
-            </div>
+        </div>
       </React.Fragment>
     );
   } else {
